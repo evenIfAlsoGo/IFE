@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>任务四：定位与居中</title>
+    <style>
+        .gray{
+            background: #ccc;
+            height: 200px;
+            width:400px;
+            position: absolute;
+            margin:auto;
+            top:0;
+            right:0;
+            left:0;
+            bottom:0;
+        }
+        .left-yellow, .right-yellow{
+            background: #fc0;
+            height: 50px;
+            width: 50px;
+            position: relative;
+        }
+        .left-yellow{
+            -webkit-border-radius:0 0 50px 0;
+        }
+        .right-yellow{
+            margin-top: 100px;
+            margin-left: 350px;
+            -webkit-border-radius: 50px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="gray">
+        <div class="left-yellow"></div>
+        <div class="right-yellow"></div>
+    </div>
+</body>
+</html>

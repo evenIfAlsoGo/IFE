@@ -1,0 +1,41 @@
+.background{
+    margin: 20px;
+    padding: 20px;
+    background: #eee;
+    border: 1px solid #999;
+    min-height:440px;
+}
+.team{
+    float: left;
+    width: 200px;
+    height: 120px;
+    background: white;
+    border: 1px solid #999;
+}
+.team-name{
+    
+    float: right;
+    text-align: center;
+    line-height: 55px;
+    width:100px;
+}
+#logo{
+    height: 80px;
+    width: 80px;
+    padding-left: 20px;
+    margin-top:20px;
+}
+.center{
+    background: white;
+    border: 1px solid #999;
+    margin-left:220px;
+    margin-right:140px;
+    padding: 20px;
+}
+.person{
+    float: right;
+    width: 120px;
+    height: 435px;
+    background: white;    
+    border: 1px solid #999;
+}

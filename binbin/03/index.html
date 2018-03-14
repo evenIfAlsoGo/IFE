@@ -1,0 +1,98 @@
+<!--
+  evenIfAlsoGo 修改于 2018.03.14 
+  要求链接: http://ife.baidu.com/course/detail/id/98
+-->
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <ul id="source">
+    <li>北京空气质量：<b>90</b></li>
+    <li>上海空气质量：<b>70</b></li>
+    <li>天津空气质量：<b>80</b></li>
+    <li>广州空气质量：<b>50</b></li>
+    <li>深圳空气质量：<b>40</b></li>
+    <li>福州空气质量：<b>32</b></li>
+    <li>成都空气质量：<b>90</b></li>
+  </ul>
+
+  <ul id="resort">
+    <!-- 
+    <li>第一名：北京空气质量：<b>90</b></li>
+    <li>第二名：北京空气质量：<b>90</b></li>
+    <li>第三名：北京空气质量：<b>90</b></li>
+     -->
+  </ul>
+
+  <button id="sort-btn">排序</button>
+
+<script type="text/javascript">
+/**
+ * getData方法
+ * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+ * 返回一个数组，格式见函数中示例
+ */
+function getData() {
+  /*
+  data = [
+    ["北京", 90],
+    ["北京", 90]
+    ……
+  ]
+  */
+  let sourceItem = document.getElementById("source").getElementsByTagName("li")
+  let data = [] /*JS不支持多维数组*/
+  for(let i=0; i<sourceItem.length; i++) {
+  	let sourceItemText = sourceItem[i].textContent
+  	/*如果直接截取前两个字符会缩小适用范围*/
+  	data[i] = [sourceItemText.slice(0, sourceItemText.indexOf("空")), sourceItem[i].getElementsByTagName("b")[0].textContent]
+  }
+  return data;
+}
+
+/**
+ * sortAqiData
+ * 按空气质量对data进行从小到大的排序
+ * 返回一个排序后的数组
+ */
+function sortAqiData(data) {
+	return data.sort( function(x,y){
+    	return y[1]-x[1];
+    })
+}
+
+/**
+ * render
+ * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
+ * 格式见ul中的注释的部分
+ */
+function render(data) {
+	let resort =  document.getElementById("resort")
+	let str = ""	
+	for(let i=0; i<data.length; i++) {
+		// 我觉得用数字表示简洁点
+		str += "<li>第"+(i+1)+"名："+data[i][0]+"空气质量：<b>"+data[i][1]+"</b></li>"
+	}
+	resort.innerHTML += str
+}
+
+function btnHandle() {
+  var aqiData = getData();
+  aqiData = sortAqiData(aqiData);
+  render(aqiData);
+}
+
+function init() {
+  // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+  document.getElementById("sort-btn").onclick = btnHandle
+}
+
+init();
+
+</script>
+</body>
+</html>
