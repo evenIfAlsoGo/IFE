@@ -1,0 +1,32 @@
+img  {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+div {
+  padding: 20px;
+  border: 1px solid #999;
+}
+.container {
+  background: #eee;
+  display: flex;
+}
+.team, .main, .person {
+  background: #fff;
+}
+.team {
+	width: 200px;	
+	height: 80px;
+	margin-right: 20px;
+}
+.team p {
+	float: right;
+}
+.main {
+	flex: 1;
+	margin-right: 20px;
+}
+.person {
+	width: 80px; 
+	height: 400px;
+}
