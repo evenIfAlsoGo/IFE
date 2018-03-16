@@ -1,0 +1,132 @@
+<!--
+  evenIfAlsoGo 修改于 2018.03.16 
+  任务六：基础 JavaScript 练习（二）
+  要求链接: http://ife.baidu.com/course/detail/id/105
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务六：基础 JavaScript 练习（二）</title>
+  <style>
+  	#showNum {
+  		height: 120px;
+  	}
+  	.num {
+  		height: 10px;
+  		width: 30px;
+  		line-height: 50px;
+  		text-align: center;
+  		background: red;
+  		color: #fff;
+  		display: inline-block;
+  		margin: 5px;
+  	}
+  </style>
+</head>
+<body>
+<input type="text" id="addNum">
+<button id="leftIn">左侧入</button>
+<button id="rightIn">右侧入</button>
+<button id="leftOut">左侧出</button>
+<button id="rightOut">右侧出</button>
+<button id="sort">排序</button>
+<div id="showNum">
+	<!--
+		<div class="num">10</div> -->
+</div>
+<script type="text/javascript">
+var num = []
+var addNum = document.getElementById("addNum")
+var showNum = document.getElementById("showNum")
+var leftIn = document.getElementById("leftIn")
+var rightIn = document.getElementById("rightIn")
+var leftOut = document.getElementById("leftOut")
+var rightOut = document.getElementById("rightOut")
+var sort = document.getElementById("sort")
+/*判断输入值是否是数字*/
+function isNumber(val){
+	if(val === "" || val == null) {
+		return false
+	}
+	if(isNaN(val)) {
+		return false
+	} else {
+		return true
+	}
+}
+/*判断是否符合条件*/
+function matchCondition(val) {
+	if(num.length>60) {
+		alert("输入太多元素了！最多60个！")
+		return false
+	}
+	if(!isNumber(val) || val<10 || val>100) {
+		alert("请输入10~100之间的数字！")
+		return false
+	} else {
+		return true
+	}
+}
+/*新建结点，并返回*/
+function createNewNode(val){
+	let newNode = document.createElement("div")
+	newNode.className = "num"
+	newNode.onclick = deleteSelf
+	newNode.style.height = val +"px"
+	newNode.style.marginTop = (120-val)+"px"
+	return newNode
+}
+/*删除此结点*/
+function deleteSelf() {
+	showNum.removeChild(this)
+}
+/*冒泡排序*/
+function sortNum(arr) {
+	let temp
+	for(let i=0; i<arr.length-1; i++) {
+		for(let j=i; j<arr.length-1; j++) {
+			if(arr[j]>arr[j+1]) {
+				temp = arr[j]
+				arr[j] = arr[j+1]
+				arr[j+1] = temp
+			}
+		}
+	}
+}
+/*点击事件*/
+leftIn.onclick = function () {
+	let val = addNum.value
+	if(matchCondition(val)) {
+		let newNode = createNewNode(val)
+		showNum.insertBefore(newNode, showNum.firstChild)
+		num.unshift(val)
+	}
+}
+rightIn.onclick = function () {
+	let val = addNum.value
+	if(matchCondition(val)) {
+		let newNode = createNewNode(val)
+		showNum.appendChild(newNode)
+		num.push(val)
+	}
+}
+leftOut.onclick = function () {
+	alert(num.shift())
+	showNum.removeChild(showNum.firstChild)
+}
+rightOut.onclick = function () {
+	alert(num.pop())
+	showNum.removeChild(showNum.lastChild)
+}
+sort.onclick = function() {
+	sortNum(num)
+	showNum.innerHTML = ""
+	for(let i=0; i<num.length; i++) { 
+		let newNode = createNewNode(num[i])
+		showNum.appendChild(newNode)
+	}
+}
+</script>
+</body>
+</html>
