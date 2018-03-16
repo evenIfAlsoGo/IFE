@@ -1,0 +1,48 @@
+<!--
+	evenIfAlsoGo 修改于 2018.03.16 
+	任务四：定位和居中问题
+	要求链接: http://ife.baidu.com/course/detail/id/95
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务四：定位与居中</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			height: 200px;
+			width: 400px;
+			background: #ccc;
+			
+			position: absolute;
+			margin: auto;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		.leftBlock, .rightBlock {
+			background: #fc0;
+			height: 50px;
+			width: 50px;
+		}
+		.leftBlock {
+			border-radius: 0 0 50px 0;
+		}
+		.rightBlock {
+			border-radius: 50px 0 0 0;
+			margin: 100px 0 0 350px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="leftBlock"></div>
+		<div class="rightBlock"></div>
+	</div>
+</body>
+</html>
