@@ -1,0 +1,86 @@
+<!--
+  evenIfAlsoGo 修改于 2018.03.16 
+  任务五：基础 JavaScript 练习（一）
+  要求链接: http://ife.baidu.com/course/detail/id/103
+-->
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>任务五：基础 JavaScript 练习（一）</title>
+    <style>
+    	.num {
+    		height: 50px;
+    		width: 50px;
+    		line-height: 50px;
+    		text-align: center;
+    		background: red;
+    		color: #fff;
+    		display: inline-block;
+    		margin: 5px;
+    	}
+    </style>
+  </head>
+<body>
+	<input type="text" id="addNum">
+	<button id="leftIn">左侧入</button>
+	<button id="rightIn">右侧入</button>
+	<button id="leftOut">左侧出</button>
+	<button id="rightOut">右侧出</button>
+	<div id="showNum">
+		<!--
+			<div class="num">10</div> -->
+	</div>
+<script type="text/javascript">
+	var addNum = document.getElementById("addNum")
+	var showNum = document.getElementById("showNum")
+	var leftIn = document.getElementById("leftIn")
+	var rightIn = document.getElementById("rightIn")
+	var leftOut = document.getElementById("leftOut")
+	var rightOut = document.getElementById("rightOut")
+	function isNumber(val){
+		if(val === "" || val == null) {
+			return false
+		}
+		if(isNaN(val)) {
+			return false
+		} else {
+			return true
+		}
+	}
+	leftIn.onclick = function () {
+		if(isNumber(addNum.value)) {
+			let newNode = document.createElement("div")
+			newNode.className = "num"
+			newNode.onclick = deleteSelf
+			newNode.textContent = addNum.value || 0
+			showNum.insertBefore(newNode, showNum.firstChild)
+		} else {
+			alert("请输入数字！")
+		}
+	}
+	rightIn.onclick = function () {
+		if(isNumber(addNum.value)) {
+			let newNode = document.createElement("div")
+			newNode.className = "num"
+			newNode.onclick = deleteSelf
+			newNode.textContent = addNum.value || 0
+			showNum.appendChild(newNode)
+		} else {
+			alert("请输入数字！")
+		}
+	}
+	leftOut.onclick = function () {
+		alert(showNum.firstChild.textContent)
+		showNum.removeChild(showNum.firstChild)
+	}
+	rightOut.onclick = function () {
+		alert(showNum.lastChild.textContent)
+		showNum.removeChild(showNum.lastChild)
+	}
+	function deleteSelf() {
+		showNum.removeChild(this)
+	}
+</script>
+</body>
+</html>
