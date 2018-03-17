@@ -1,0 +1,195 @@
+<!--
+	evenIfAlsoGo 修改于 2018.03.16 
+	任务六：通过 HTML 及 CSS 模拟报纸排版
+	要求链接: http://ife.baidu.com/course/detail/id/99
+
+	注：因为样式过于繁杂且基本无规律，就直接写行内样式了。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务六：通过 HTML 及 CSS 模拟报纸排版</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+
+		}
+		body {
+			height: 1386px;
+			padding: 0 44px;
+		  width: 892px;
+			margin: 0 auto;
+			border: 1px solid #C0C0C0;
+			box-shadow: 2px 2px 2px #F0F0F0;
+		}
+	</style>
+</head>
+<body>
+	<nav style="border-bottom: 2px solid #938e86; width: 892px;">
+		<div style="height: 61px; width: 110px; background: red;">
+			<p style="font-size: 12px; color: #fff; font-family: '黑体'; position: relative;top:45px; left: 5px;">
+					ife.baidu.com
+			</p>
+		</div>
+		<p style="font-size: 12px; color: #d45d5c; font-family: '黑体'; float: right; margin-top: -17px;">
+			2016.03
+		</p>
+	</nav>
+	<div style="margin: 30px 0; width: 100%; height: 301px;">
+		<div style="height: 301px; width: 641px; background-image: url(img/computer_1.jpg); float: left;">
+			<div style="height: 301px; width: 191px; background-color: #405B48; opacity: 0.6; float: left;"></div>
+			<div style="height: 301px; width: 191px; background-color: #B96A67; opacity: 0.6; float: right;"></div>
+		</div>
+		<div style="height: 301px; width: 203px; float: right; border-top: 2px solid #cc8091; padding: 5px; margin: 0 ">
+			<p style="font-size:24px; color:#000;font-family: '微软雅黑';font-style: italic;text-decoration: underline;">
+				ABOUT<br/>TECHNOLOGE
+			</p>
+			<p style="font-size:12px; color:#676767;font-family: '楷体';">
+				About technologe about technologe about technologe
+			</p>
+			<p style="font-size:116px; color:#75b86b;font-family: '微软雅黑';font-style: italic;">
+				700
+			</p>
+			<span style="font-size:55px;color:#cc8091;font-family: '微软雅黑'">
+				3.2
+			</span>
+			<span style="font-size:21px;color:#cc8091;font-family: '微软雅黑'; position: relative; bottom: 15px;left: -10px;">
+			  css
+		  </span>
+			<span style="font-size:12px;color:#cc8091;font-family: '微软雅黑';position: relative; right: 45px;">
+			  csscsscsscss
+			</span>
+		</div>
+	</div>
+
+	<div style="margin-bottom: 20px;">
+		<div style="width: 220px; margin-right: 15px; display: inline-block; vertical-align: top;">
+			<p style="font-size: 16px; color: #418c59; font-weight: bold; text-decoration: underline;">
+			  What
+			</p>
+			<p style="font-size: 12px; color: #767777; font-family: '宋体'; padding: 8px 0;">
+			  前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端
+			</p>
+		</div>
+		<div style="width: 220px; margin-right: 15px; display: inline-block; vertical-align: top;">
+			<p style="font-size: 16px; color: #d2994f; font-weight: bold; text-decoration: underline;">
+			  When
+		  </p>
+			<p style="font-size: 12px; color: #231815; font-family: '微软雅黑'; padding: 8px 0; opacity: 0.7;">
+			  前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前
+		  </p>
+		</div>
+		<div style="width: 150px; display: inline-block; vertical-align: top;">
+			<p style="font-size: 16px; color: #cc7680; font-weight: bold; text-decoration: underline;">
+			  How
+		  </p>
+			<p style="font-size: 12px; color: #767777; font-family: '宋体'; line-height: 20px; padding: 8px 0;">
+				前端前端前端前端<br/>前端前端前端前端前端<br/>前端前端前端
+			</p>
+			<div>
+				<span style="font-size: 12px; font-family: '微软雅黑'; padding: 8px 0;opacity: 0.7;">
+				  What------&nbsp
+			  </span>
+				<span style="font-size: 12px; color: #cd4a48; font-family: '微软雅黑'; padding: 8px 0; font-style: italic; opacity: 0.7;">
+				  40%
+				</span>
+			</div>
+			<div>
+				<span style="font-size: 12px; font-family: '微软雅黑'; padding: 8px 0;opacity: 0.7;">
+				  What------&nbsp</span>
+				<span style="font-size: 12px; color: #cd4a48; font-family: '微软雅黑'; padding: 8px 0; font-style: italic; opacity: 0.7;">
+				  30%
+				</span>
+			</div>
+			<div>
+				<span style="font-size: 12px; font-family: '微软雅黑'; padding: 8px 0;opacity: 0.7;">
+				  What------&nbsp
+				</span>
+				<span style="font-size: 12px; color: #cd4a48; font-family: '微软雅黑'; padding: 8px 0; font-style: italic; opacity: 0.7;">
+				  30%
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div style="border-bottom: 1px solid #938e8c;height: 715px">
+		<div style="width: 415px; float: left;">
+			<div style="width: 415px; border-bottom: 2px solid #11456b; padding: 30px 0 10px;">
+				<span style="font-size: 72px; color: #f5e327; font-family: '黑体'; font-weight: bold; font-style: italic;">
+					THE&nbsp
+				</span>
+				<span  style="font-size: 42px; color: #11456b; font-family: '黑体'; font-weight: bold; line-height: 30px; ">
+					TECHNOLOGE OF FRONT
+				</span>
+				<br />
+				<p style="font-size: 33px; color: #11456b; font-family: '黑体'; font-weight: bold; margin-top:5px;">
+				  前端技术领域
+				</p>
+			</div>
+			<div style="margin-top: 20px;">
+				<span style="font-size: 70px; color: #f5e327; font-family: '微软雅黑'; float: left; margin: -10px 10px 0 0">
+				  前
+				</span>
+				<span style="font-size: 12px; color: #767777; font-family: '宋体'">
+				  端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端 前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端 前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端 前端前端前端前端前端前端前前端前端前端前端前
+				</span>
+	      <img src="img/computer_2.jpg" alt="" style="float: right; margin: 10px; ">
+	      <span style="font-size: 12px; color: #767777; font-family: '宋体'">
+	      	  端前端前端前端前端前端前前端前端前端 前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+	      </span>
+			</div>
+		</div>
+		<div style="width: 459px; float: right; margin-top: 40px;">
+			<div style="height: 275px; width: 458px; background-image: url(img/computer_3.jpg);">
+				<div style="height: 60px; width: 100%; background: rgba(0,0,0,0.4); position: relative; top: 215px;">
+					<div style="height: 44px; border-left: 3px solid #72b16a; position: relative; top: 8px; left: 50px; padding-left: 15px;">
+						<span style="font-size: 26px; color: #fff; font-family: '微软雅黑'; line-height: 44px;">
+							前端技术
+						</span>
+						<span style="font-size: 14px; color: #72b16a; font-family: '微软雅黑'; font-style: italic;">
+						  前端技术前端技术
+						</span>
+					</div>
+				</div>
+			</div>
+			<div style="height: 318px; width: 459px; background:#EEEED6; margin-top: 30px; ">
+				<ul style="font-size: 16px; color: #5a5b5b; font-family: '宋体';line-height: 40px; list-style: none;padding: 20px 40px;">
+					<li>▲ 前端前端前端前端前端前端...............前端</li>
+					<li>▲ 前端前端前端前端前端前端...............前端</li>
+					<li>▲ 前端前端前端前端前端前端...............前端</li>
+				</ul>
+				<div style="background: #d45d5c; height: 158px; width: 260px; float: left; ">
+					<span style="font-size:110px; font-family: '微软雅黑';color: #fff; float: left;margin:0 15px 0 10px;">
+					  0
+					</span>
+					<div style="border-left: 2px solid #fff; height: 86px;margin: 30px 0 0 80px;">
+						<span style="font-size: 21px; color: #fff; font-family: '黑体'; font-style: italic;">
+							ONE TWO<br/>THREE FORE FIVE
+						</span>
+						<br/>
+						<p style="font-size: 12px; color: #fff; font-family: '黑体'; margin-top: 5px;">
+						  hello world hello world hello world
+						</p>
+					</div>
+				</div>
+				<div style="float: right;width: 170px;margin:10px 10px 0 10px">
+					<span style="font-size: 72px; color: #d45d5c; font-family: '黑体';float: left;margin: 0 5px -50px -35px;">
+					  “
+					</span>
+					<span style="font-size: 14px; color: #5a5b5b; font-family: '黑体'; font-style: italic; ">
+					  hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world
+					</span>
+					<span style="font-size: 72px; color: #d45d5c; font-family: '黑体';float: right;width: 50px;">
+					  ”
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p style="float: right; font-size: 12px; color: #d45d5c; font-family: '黑体';padding: 2px;">
+	  ife.baidu.com
+	</p>
+</body>
+</html>
