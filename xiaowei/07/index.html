@@ -1,0 +1,228 @@
+<!--
+	evenIfAlsoGo 修改于 2018.03.16 
+	任务七：实现常见的技术产品官网的页面架构及样式布局
+	要求链接: http://ife.baidu.com/course/detail/id/102
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<nav>
+		<div class="logo">
+			<img src="./img/01.gif">
+			<p>新世界</p>
+		</div>
+		<ul class="navigation">
+			<li><a href="">首页</a></li>
+			<li><a href="">最新活动</a></li>
+			<li><a href="">项目介绍</a></li>
+			<li><a href="">爱心社区</a></li>
+			<li><a href="">关于我们</a></li>
+			<li id="login"><a href="">登录</a></li>
+		</ul>
+	</nav>
+
+	<div class="header">
+		<div class="header_word">
+			<p>Time of new life</p>
+			<span>新时代，年轻的人们让我们一起</span>
+			<br>
+			<span>体验新生活，享受新生活</span>
+			<button class="start">开始体验</button>
+		</div>
+	</div>
+
+	<div class="slogan">
+		<ol>
+			<li><img src="img/04.png" alt=""></li>
+			<li><img src="img/05.png" alt=""></li>
+			<li><img src="img/06.png" alt=""></li>
+			<li><img src="img/07.png" alt=""></li>
+		</ol>
+		<ul>
+			<li>
+				<p>打造全新世界观，让你更爱的你的生活</p>
+			</li>
+			<li>
+				<p>丰富多彩的公益活动，发挥新世界的主人公意识</p>
+			</li>
+			<li>
+				<p>时尚的新理念，超前体验未知的生活</p>
+			</li>
+			<li>
+				<p>完善的培养机制，培养你全新的世界观</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="aboutNewWorld">
+		<p>关于新世界，你不知道的还有什么？</p>
+	</div>
+
+	<div class="findNewCity">
+		<p>查找新世界城市活动信息</p>
+		<hr>
+		<span>每个城市的有不同的活动信息，请自动查询您所需要了解的城市</span>
+		<ul>
+			<li>
+				<select name="" id="">
+					<option value="">中国</option>
+					<option value="">美国</option>
+					<option value="">英国</option>
+				</select></li>
+			<li>
+				<select name="" id="">
+					<option value="">北京市</option>
+					<option value="">天津市</option>
+					<option value="">河北省</option>
+				</select></li>
+			<li>
+				<select name="" id="">
+					<option value="">朝阳区</option>
+				</select></li>
+			<li>
+				<button id="search">搜索</button></li>
+		</ul>
+	</div>
+
+	<div class="active">
+		<ul>
+			<li>
+				<img src="img/11.png" alt="">
+				<div class="active_content">
+					<p>北京活动</p>
+					<span>新社区大联盟</span>
+				</div>
+			</li>
+			<li>	
+				<div class="active_content">
+					<p>上海活动</p>
+					<span>夜上海新景观探索</span>
+				</div>
+				<img src="img/12.png" alt="">
+			</li>
+			<li>
+				<img src="img/13.png" alt="">
+				<div class="active_content">
+					<p>深圳活动</p>
+					<span>全新海岸线观战点</span>
+				</div>
+			</li>
+			<li>
+				<img src="img/14.png" alt="">
+				<div class="active_content">
+					<p>香港活动</p>
+					<span>奢侈消费大派送</span>
+				</div>		
+			</li>
+		</ul>
+	</div>
+
+	<div class="newWorld">
+		<div class="newWorld_time">
+			<cite>新世界</cite>
+			<p>TIME</p>
+			<address>@新世界-北京</address>
+			<time>2018.3.18</time>
+		</div>
+		<div class="newWorld_more">
+			<h2>新世界/<span>01</span></h2>
+			<article>
+				新世界新世界新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界新世界新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新
+			</article>
+			<button>更多详情</button>
+		</div>
+	</div>
+
+	<div class="newTime">
+		<div class="newTime_left">
+			<p>新时代</p>
+			<p>关于爱生活的我们</p>
+			<hr/>
+			<button>查看更多</button>
+		</div>
+		<div class="newTime_right">
+			<p>新时代</p>
+			<p>关于爱生活的我们</p>
+			<hr />
+			<button>查看更多</button>
+		</div>
+	</div>
+
+	<div class="volunteer">
+		<div class="volunteer_advertise">
+			<h2>成为我们的志愿者</h2>
+			<hr>
+			<p>新世界的大家庭需要每一个爱生活的人加入，如果你够年轻，有梦想，有激情那就不要犹豫，快来加入我们，成为改变所有人生活的人</p>
+		</div>
+		<div class="volunteer_agreemnt">
+			<ul>
+				<li>
+					<p>新世界志愿者权利</p>
+					<span>加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，秉着本着平等资源的原则...</span>
+					<button>
+						<img src="img/21.png"/> more
+					</button>
+				</li>
+				<li>
+					<p>新世界志愿者权利</p>
+					<span>加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，秉着本着平等资源的原则</span>
+					<button>
+						<img src="img/21.png"/> more
+					</button>
+				</li>
+				<li>
+					<p>更多条款</p>
+					<button>
+						<img src="img/21.png"/> more
+					</button>
+				</li>
+			</ul>
+		</div>
+		<div class="volunteer_apply">
+			<table>
+				<tr>
+					<td><input value="姓名：" /></td>
+          <td><input value="年龄：" /></td>
+				</tr>
+				<tr>
+					<td><input value="联系方式：" /></td>
+          <td><input value="联系地址：" /></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<textarea id="dreamLife">请简单描述您梦想的生活：</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button id="submit">提交申请</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="link">
+		<p>联系我们</p>
+		<span>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯也可以通过以下任何方式关注我们动态</span>
+		<input type="text" value="evenIfAlsoGo@gmail.com">
+		<button>提交</button>
+		<ul>
+			<li><a href=""><img src="img/17.png" alt=""></a></li>
+			<li><a href=""><img src="img/18.png" alt=""></a></li>
+			<li><a href=""><img src="img/19.png" alt=""></a></li>
+			<li><a href=""><img src="img/20.png" alt=""></a></li>
+		</ul>
+	</div>
+
+	<footer>
+		<p>@2018新世界</p>
+		<button>Back to top</button>
+	</footer>
+</body>
+</html>
