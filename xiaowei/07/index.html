@@ -137,7 +137,7 @@
 			<button>更多详情</button>
 		</div>
 	</div>
-
+	
 	<div class="newTime">
 		<div class="newTime_left">
 			<p>新时代</p>
@@ -184,18 +184,19 @@
 			</ul>
 		</div>
 		<div class="volunteer_apply">
+			<!--给 placeholder 的文字前面加了一个空格...完美解决字体距离左边太近，加了 padding-left 之后按钮不对齐的问题，哈哈-->
 			<table>
 				<tr>
-					<td><input value="姓名：" /></td>
-          <td><input value="年龄：" /></td>
+					<td><input placeholder=" 姓名：" /></td>
+          <td><input placeholder=" 年龄：" /></td>
 				</tr>
 				<tr>
-					<td><input value="联系方式：" /></td>
-          <td><input value="联系地址：" /></td>
+					<td><input placeholder=" 联系方式：" /></td>
+          <td><input placeholder=" 联系地址：" /></td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<textarea id="dreamLife">请简单描述您梦想的生活：</textarea>
+						<textarea id="dreamLife" placeholder=" 请简单描述您梦想的生活："></textarea>
 					</td>
 				</tr>
 				<tr>
