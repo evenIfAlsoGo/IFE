@@ -9,8 +9,10 @@
 	<meta charset="UTF-8">
 	<title>任务六：基础 JavaScript 练习（二）</title>
   <style>
-  	#showNum {
+  	.showNum {
   		height: 120px;
+  		display: flex;
+  		align-items: flex-end;
   	}
   	.num {
   		height: 10px;
@@ -31,7 +33,7 @@
 <button id="leftOut">左侧出</button>
 <button id="rightOut">右侧出</button>
 <button id="sort">排序</button>
-<div id="showNum">
+<div id="showNum" class="showNum">
 	<!--
 		<div class="num">10</div> -->
 </div>
@@ -74,7 +76,6 @@ function createNewNode(val){
 	newNode.className = "num"
 	newNode.onclick = deleteSelf
 	newNode.style.height = val +"px"
-	newNode.style.marginTop = (120-val)+"px"
 	return newNode
 }
 /*删除此结点*/
