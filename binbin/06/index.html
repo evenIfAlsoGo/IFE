@@ -1,0 +1,112 @@
+<!--
+  evenIfAlsoGo 修改于 2018.03.16 
+  任务六：基础 JavaScript 练习（三）
+  要求链接: http://ife.baidu.com/course/detail/id/107
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务六：基础 JavaScript 练习（三）</title>
+  <style>
+  	/*显示块的总区域*/
+  	.showWord {
+  		height: 120px;
+  		display: flex;
+  		flex-wrap: wrap;
+  	}
+  	/*单位块的样式*/
+  	.word {
+  		height: 50px;
+  		min-width: 50px;
+  		padding: 0 10px;
+  		line-height: 50px;
+  		text-align: center;
+  		background: red;
+  		color: #fff;	
+  		margin: 5px;
+  	}
+  	/*模糊查找后的标识*/
+  	.sign {
+  		color: #000;
+  	}
+
+  	textarea {
+  		height: 100px;
+  		width: 200px;
+  	}
+  </style>
+</head>
+<body>
+<textarea id="addWord"></textarea>
+<button id="leftIn">左侧入</button>
+<button id="rightIn">右侧入</button>
+<button id="leftOut">左侧出</button>
+<button id="rightOut">右侧出</button>
+<input type="text" id="searchText">
+<button id="search">查询</button>
+<div id="showWord" class="showWord">
+	<!--
+		<div class="word">10</div> -->
+</div>
+<script type="text/javascript">
+	var word = []
+	var addWord = document.getElementById("addWord")
+	var showWord = document.getElementById("showWord")
+	var leftIn = document.getElementById("leftIn")
+	var rightIn = document.getElementById("rightIn")
+	var leftOut = document.getElementById("leftOut")
+	var rightOut = document.getElementById("rightOut")
+	var searchText = document.getElementById("searchText")
+	var search = document.getElementById("search")
+
+	/*新建结点，并返回*/
+	function createNewNode(val){
+		let newNode = document.createElement('div')
+		newNode.className = "word"
+		newNode.onclick = deleteSelf
+		newNode.innerHTML = val
+		return newNode
+	}
+	/*删除此结点*/
+	function deleteSelf() {
+		showWord.removeChild(this)
+	}
+	/*点击事件*/
+	leftIn.onclick = function () {
+		let val = addWord.value
+		let words = val.match(/[0-9A-Za-z\u4e00-\u9fa5]+/g)
+		for(let i=0; i<words.length; i++) {
+			let newNode = createNewNode(words[i])
+			showWord.insertBefore(newNode, showWord.firstChild)
+			word.unshift(words[i])
+		}
+	}
+	rightIn.onclick = function () {
+		let val = addWord.value
+		let words = val.match(/[0-9A-Za-z\u4e00-\u9fa5]+/g)
+		for(let i=0; i<words.length; i++) {
+			let newNode = createNewNode(words[i])
+			showWord.appendChild(newNode)
+			word.push(words[i])
+		}
+	}
+	leftOut.onclick = function () {
+		alert(word.shift())
+		showWord.removeChild(showWord.firstChild)
+	}
+	rightOut.onclick = function () {
+		alert(word.pop())
+		showWord.removeChild(showWord.lastChild)
+	}
+	search.onclick = function(){
+		let text = searchText.value
+		let nodes = showWord.getElementsByTagName("div")
+		for(let i=0; i<nodes.length; i++) {
+			let reg = new RegExp(text, "g")
+			nodes[i].innerHTML = nodes[i].textContent.replace(reg, "<span class='sign'>" + text + "</span>" )
+		}
+	}
+</script>
+</body>
+</html>
